@@ -2,44 +2,36 @@ Cyclope is a mobile phone app designed to help cyclists navigate using GPX paths
 uses an open-source map service and combines gpx track guidance with weather forecasts.
 
 <p align="center">
-  <img src="screenshot.jpg" alt="" width="400" />
+  <img src="img/screenshot.jpg" alt="" width="400" />
 </p>
 
 Cyclope main features:
- - Load your GPX file and get a quick overview: path on the map, length, cumulative ascent, duration.
+ - Load your GPX track and get a quick overview: track on the map, length, cumulative ascent, duration.
  - Accurate riding directions with useful points of interest like water sources and restaurants.
  - Several types of maps can be chosen from the Options panel.
- - While riding along the GPX path, you get current speed/altitude, ridden distance as well as distance to destination.
+ - While riding along the GPX track, you get current speed/altitude, ridden distance as well as distance to destination.
  - Real-time weather information like current temperature, wind speed and rain forecast.
 
 Running on your Android phone, Cyclope is designed to optimize power consumption so that, on an average phone, you can enjoy **15+ hours of battery time**.
 
-This guide shows a simple setup to build Cyclope with Android SDK tools and
-install the compiled APK on your phone. This is done using WSL or Linux.
+## Features
 
-## License and data sources
+<table cellpadding="12">
+   <tr>
+      <td><img src="img/weather.png" width="200" hspace="12" vspace="12" align="left" alt="Weather forecast" /><span>Air temperature, rain probability and wind speed prediction.</span></td>
+      <td><img src="img/poi.png" width="200" hspace="12" vspace="12" align="left" alt="Points of interest" /><span>Shows useful points of interest along the route.</span></td>
+   </tr>
+   <tr>
+      <td><img src="img/multi_tracks.png" width="200" hspace="12" vspace="12" align="left" alt="Multiple tracks" /><span>Load GPX files with multiple tracks that can be easily reordered via dragging and tapping.</span></td>
+      <td><img src="img/instant_speed.png" width="200" hspace="12" vspace="12" align="left" alt="Instant speed" /><span>Monitor current speed, elevation and lapsed distance while riding.</span></td>
+   </tr>
+   <tr>
+      <td><img src="img/climb.png" width="200" hspace="12" vspace="12" align="left" alt="Climb information" /><span>Follow climbs and elevation information.</span></td>
+      <td></td>
+   </tr>
+</table>
 
-Cyclope's original source code is licensed under the Apache License 2.0; see
-[LICENSE](LICENSE). That license does not apply to third-party services, their
-data, or bundled GPX files unless their respective owners separately grant those
-rights.
-
-- OpenStreetMap data used for points of interest is © OpenStreetMap contributors
-   and available under the [ODbL 1.0](https://www.openstreetmap.org/copyright).
-   Credit OpenStreetMap and make the ODbL license available when displaying or
-   redistributing that data.
-- Map tiles are served by Esri ArcGIS services. Their source credits and terms
-   vary by selected layer; the app displays the selected layer's attribution.
-   See [Esri terms](https://www.esri.com/en-us/legal/terms/full-master-agreement)
-   and the corresponding [ArcGIS basemap service](https://server.arcgisonline.com/ArcGIS/rest/services/).
-- Weather data is provided by Open-Meteo under
-   [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Credit Open-Meteo
-   and link the license. The free API is for non-commercial use only; commercial
-   use requires an eligible Open-Meteo subscription. See
-   [Open-Meteo's terms](https://open-meteo.com/en/terms).
-- The bundled default GPX route is a separate work. Its inclusion here does not
-   grant permission to redistribute that route; check its source and rights
-   before republishing it.
+The following sections show a simple setup to build Cyclope with Android SDK tools and install the compiled APK on your phone. This is done using WSL or Linux.
 
 ## Prerequisites
 
@@ -47,7 +39,9 @@ rights.
 - Java 17+
 - `wget`, `unzip`, `python3`
 
-If Java is missing:
+Except for the actual copy of the .apk program to your phone, the build process is done in Linux.
+
+If Java is missing, open your Linux terminal and:
 
 ```sh
 sudo apt update
@@ -118,7 +112,7 @@ app/build/outputs/apk/debug/Cyclope-debug.apk
 
 Use debug while developing and testing, release for riding.
 
-### Build a release APK
+### Build a release APK using Linux under WSL
 
 Android only installs signed APKs. The release build is signed with your own key,
 created once and kept safe: **if you lose it, you can only install a new release
@@ -159,18 +153,21 @@ which deletes the app data.
 
 ## Install APK on phone via USB cable
 
-Enable Developer Options + USB debugging on your phone, then
-connect your phone to your PC using a USB cable. Copy to
-the phone *Cyclope-debug.apk* and from the phone double click
-on it and install. Or better use *adb*.
+Enable Developer Options + USB debugging on your phone, then connect your phone to your PC using a USB cable. Copy to the phone *Cyclope-debug.apk* and from the phone double click on it and install. Or better use *adb*.
 
 ---
 
-## Install and use adb
+## Install and use adb from Windows PowerShell
+
+To copy the .apk to my phone using **adb**, Windows PowerShell seems to give less problems.
 
 ```sh
 winget install Google.PlatformTools
-adb devices
+
+adb.exe kill-server
+adb.exe start-server
+adb.exe devices
+
 adb install -r "app\build\outputs\apk\debug\Cyclope-debug.apk"
 # or, for a release build:
 adb install -r "app\build\outputs\apk\release\Cyclope-release.apk"
@@ -178,7 +175,7 @@ adb install -r "app\build\outputs\apk\release\Cyclope-release.apk"
 
 ## Troubleshooting
 
-### `JAVA_HOME is not set`
+#### JAVA_HOME is not set
 
 ```sh
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
@@ -187,7 +184,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 (Then add to `~/.bashrc` if needed.)
 
-### `sdkmanager: command not found`
+#### sdkmanager: command not found
 
 Check:
 
@@ -201,3 +198,27 @@ If the folder is correct, reload shell:
 ```sh
 source ~/.bashrc
 ```
+
+## License and data sources
+
+Cyclope's original source code is licensed under the Apache License 2.0; see
+[LICENSE](LICENSE). That license does not apply to third-party services, their
+data, or bundled GPX files unless their respective owners separately grant those
+rights.
+
+- OpenStreetMap data used for points of interest is © OpenStreetMap contributors
+   and available under the [ODbL 1.0](https://www.openstreetmap.org/copyright).
+   Credit OpenStreetMap and make the ODbL license available when displaying or
+   redistributing that data.
+- Map tiles are served by Esri ArcGIS services. Their source credits and terms
+   vary by selected layer; the app displays the selected layer's attribution.
+   See [Esri terms](https://www.esri.com/en-us/legal/terms/full-master-agreement)
+   and the corresponding [ArcGIS basemap service](https://server.arcgisonline.com/ArcGIS/rest/services/).
+- Weather data is provided by Open-Meteo under
+   [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Credit Open-Meteo
+   and link the license. The free API is for non-commercial use only; commercial
+   use requires an eligible Open-Meteo subscription. See
+   [Open-Meteo's terms](https://open-meteo.com/en/terms).
+- The bundled default GPX route is a separate work. Its inclusion here does not
+   grant permission to redistribute that route; check its source and rights
+   before republishing it.
