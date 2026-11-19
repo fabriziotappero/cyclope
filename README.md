@@ -18,15 +18,15 @@ Running on your Android phone, Cyclope is designed to optimize power consumption
 
 <table cellpadding="12">
    <tr>
-      <td><img src="img/weather.png" width="200" hspace="12" vspace="12" align="left" alt="Weather forecast" /><span>Air temperature, rain probability and wind speed prediction.</span></td>
-      <td><img src="img/poi.png" width="200" hspace="12" vspace="12" align="left" alt="Points of interest" /><span>Shows useful points of interest along the route.</span></td>
+      <td><img src="img/weather.png" width="200" hspace="8" vspace="2" align="left" alt="Weather forecast" /><span>Air temperature, rain probability and wind speed prediction.</span></td>
+      <td><img src="img/poi.png" width="200" hspace="8" vspace="2" align="left" alt="Points of interest" /><span>Shows useful points of interest along the route.</span></td>
    </tr>
    <tr>
-      <td><img src="img/multi_tracks.png" width="200" hspace="12" vspace="12" align="left" alt="Multiple tracks" /><span>Load GPX files with multiple tracks that can be easily reordered via dragging and tapping.</span></td>
-      <td><img src="img/instant_speed.png" width="200" hspace="12" vspace="12" align="left" alt="Instant speed" /><span>Monitor current speed, elevation and lapsed distance while riding.</span></td>
+      <td><img src="img/multi_tracks.png" width="200" hspace="8" vspace="2" align="left" alt="Multiple tracks" /><span>Load GPX files with multiple tracks that can be easily reordered via dragging and tapping.</span></td>
+      <td><img src="img/instant_speed.png" width="200" hspace="8" vspace="2" align="left" alt="Instant speed" /><span>Monitor current speed, elevation and lapsed distance while riding.</span></td>
    </tr>
    <tr>
-      <td><img src="img/climb.png" width="200" hspace="12" vspace="12" align="left" alt="Climb information" /><span>Follow climbs and elevation information.</span></td>
+      <td><img src="img/climb.png" width="200" hspace="8" vspace="2" align="left" alt="Climb information" /><span>Follow climbs and elevation information.</span></td>
       <td></td>
    </tr>
 </table>
