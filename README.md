@@ -14,7 +14,7 @@ Cyclope main features:
 
 Running on your Android phone, Cyclope is designed to optimize power consumption so that, on an average phone, you can enjoy **15+ hours of battery time**.
 
-## Features
+## Main Features
 
 <table cellpadding="12">
    <tr>
