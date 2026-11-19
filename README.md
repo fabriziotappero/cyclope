@@ -7,29 +7,29 @@ uses an open-source map service and combines gpx track guidance with weather for
 
 ## Main Features
 
-<table width="100%" cellpadding="8" style="max-width: 560px; margin-left: auto; margin-right: auto;">
+<table width="100%" cellpadding="4" style="max-width: 560px; margin-left: auto; margin-right: auto;">
    <tr>
-      <td width="45%"><img src="img/weather.png" width="190" alt="Weather forecast" /></td>
+      <td width="35%"><img src="img/weather.png" width="190" alt="Weather forecast" /></td>
       <td valign="middle">Air temperature, rain probability and wind speed prediction in real time.</td>
    </tr>
    <tr>
-      <td width="45%"><img src="img/poi.png" width="190" alt="Points of interest" /></td>
+      <td width="35%"><img src="img/poi.png" width="190" alt="Points of interest" /></td>
       <td valign="middle">Shows useful points of interest along the route.</td>
    </tr>
    <tr>
-      <td width="45%"><img src="img/multi_tracks.png" width="190" alt="Multiple tracks" /></td>
+      <td width="35%"><img src="img/multi_tracks.png" width="190" alt="Multiple tracks" /></td>
       <td valign="middle">Load GPX files with multiple tracks that can be easily reordered via dragging and tapping.</td>
    </tr>
    <tr>
-      <td width="45%"><img src="img/instant_speed.png" width="190" alt="Instant speed" /></td>
+      <td width="35%"><img src="img/instant_speed.png" width="190" alt="Instant speed" /></td>
       <td valign="middle">Monitor current speed, elevation and lapsed distance while riding.</td>
    </tr>
    <tr>
-      <td width="45%"><img src="img/climb.png" width="190" alt="Climb information" /></td>
+      <td width="35%"><img src="img/climb.png" width="190" alt="Climb information" /></td>
       <td valign="middle">Instant elevation and climb information along all multiple tracks.</td>
    </tr>
    <tr>
-      <td width="45%"><img src="img/battery.png" width="190" alt="Battery life" /></td>
+      <td width="5%"><img src="img/battery.png" width="190" alt="Battery life" /></td>
       <td valign="middle">Dark maps give 20+ hours of battery life with 100% screen brightness.</td>
    </tr>
 </table>
