@@ -5,20 +5,11 @@ uses an open-source map service and combines gpx track guidance with weather for
   <img src="img/screenshot.jpg" alt="" width="400" />
 </p>
 
-Cyclope main features:
- - Load your GPX track and get a quick overview: track on the map, length, cumulative ascent, duration.
- - Accurate riding directions with useful points of interest like water sources and restaurants.
- - Several types of maps can be chosen from the Options panel.
- - While riding along the GPX track, you get current speed/altitude, ridden distance as well as distance to destination.
- - Real-time weather information like current temperature, wind speed and rain forecast.
-
-Running on your Android phone, Cyclope is designed to optimize power consumption so that, on an average phone, you can enjoy **15+ hours of battery time**.
-
 ## Main Features
 
 <table cellpadding="12">
    <tr>
-      <td><img src="img/weather.png" width="200" hspace="8" vspace="2" align="left" alt="Weather forecast" /><span>Air temperature, rain probability and wind speed prediction.</span></td>
+      <td><img src="img/weather.png" width="200" hspace="8" vspace="2" align="left" alt="Weather forecast" /><span>Air temperature, rain probability and wind speed prediction in real time.</span></td>
       <td><img src="img/poi.png" width="200" hspace="8" vspace="2" align="left" alt="Points of interest" /><span>Shows useful points of interest along the route.</span></td>
    </tr>
    <tr>
@@ -26,14 +17,18 @@ Running on your Android phone, Cyclope is designed to optimize power consumption
       <td><img src="img/instant_speed.png" width="200" hspace="8" vspace="2" align="left" alt="Instant speed" /><span>Monitor current speed, elevation and lapsed distance while riding.</span></td>
    </tr>
    <tr>
-      <td><img src="img/climb.png" width="200" hspace="8" vspace="2" align="left" alt="Climb information" /><span>Follow climbs and elevation information.</span></td>
-      <td></td>
+      <td><img src="img/climb.png" width="200" hspace="8" vspace="2" align="left" alt="Climb information" /><span>Instant elevation and climb information along all multiple tracks.</span></td>
+      <td><img src="img/battery.png" width="200" hspace="8" vspace="2" align="left" alt="Instant speed" /><span>Dark maps give 20+ hours of battery life with 100% screen brightness.</span></td>
    </tr>
 </table>
 
-The following sections show a simple setup to build Cyclope with Android SDK tools and install the compiled APK on your phone. This is done using WSL or Linux.
+Running on your Android phone, Cyclope is designed to optimize power consumption so that, on an average phone, you can enjoy **15+ hours of battery time**.
 
-## Prerequisites
+<h3 align="center"><a href="releases/Cyclope_v1.3.3.apk">DOWNLOAD AND INSTALL</a></h3>
+
+## Compile Cyclope
+
+The following sections show a simple setup to build Cyclope with Android SDK tools and install the compiled APK on your phone. This is done using WSL or Linux.
 
 - WSL/Linux shell
 - Java 17+
